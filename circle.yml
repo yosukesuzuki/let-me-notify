@@ -1,0 +1,19 @@
+machine:
+  environment:
+    AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY
+    AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+  python:
+    version: 2.7.8
+
+dependencies:
+  pre:
+    - python getlatestsdk.py
+    - unzip -q -d $HOME google_appengine.zip
+
+# set environment variable PATH = $PATH:$HOME/google_appengine/
+# set environment variable AWS_ACCESS_KEY_ID=toyourkeyid
+# set environment variable AWS_SECRET_ACCESS_KEY=toyoursecret
+
+test:
+  override:
+    - echo $PATH | tox

@@ -1,0 +1,70 @@
+{
+"Records": [
+{
+"eventVersion": "1.02",
+"userIdentity": {
+"type": "IAMUser",
+"principalId": "xxxxxxxxxxxxx",
+"arn": "arn:aws:iam::999999999999:user/hoge-user",
+"accountId": "999999999999",
+"accessKeyId": "XXXXXXXXXXXXXXXXXXXX",
+"userName": "hoge-user",
+"sessionContext": {
+"attributes": {
+"mfaAuthenticated": "true",
+"creationDate": "2015-04-09T04:03:19Z"
+}
+},
+"invokedBy": "signin.amazonaws.com"
+},
+"eventTime": "2015-04-09T04:04:01Z",
+"eventSource": "ec2.amazonaws.com",
+"eventName": "AuthorizeSecurityGroupIngress",
+"awsRegion": "ap-northeast-1",
+"sourceIPAddress": "192.168.0.1",
+"userAgent": "signin.amazonaws.com",
+"requestParameters": {
+"groupId": "sg-iiiiiiiii",
+"ipPermissions": {
+"items": [
+{
+"ipProtocol": "tcp",
+"fromPort": 3389,
+"toPort": 3389,
+"groups": { },
+"ipRanges": {
+"items": [
+{
+"cidrIp": "192.168.0.1/32"
+}
+]
+},
+"prefixListIds": { }
+},
+{
+"ipProtocol": "tcp",
+"fromPort": 22,
+"toPort": 22,
+"groups": { },
+"ipRanges": {
+"items": [
+{
+"cidrIp": "192.168.0.1/32"
+}
+]
+},
+"prefixListIds": { }
+}
+]
+}
+},
+"responseElements": {
+"_return": true
+},
+"requestID": "xxxxx",
+"eventID": "xxxxx",
+"eventType": "AwsApiCall",
+"recipientAccountId": "999999999999"
+}
+]
+}

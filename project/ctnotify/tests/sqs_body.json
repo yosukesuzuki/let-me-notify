@@ -1,0 +1,11 @@
+{
+  "Type" : "Notification",
+  "MessageId" : "xxxxx",
+  "TopicArn" : "arn:aws:sns:ap-northeast-1:9999999999999:cloudtrail-push",
+  "Message" : "{\"s3Bucket\":\"test-bucket\",\"s3ObjectKey\":[\"key-for-test\"]}",
+  "Timestamp" : "2015-04-09T08:24:52.060Z",
+  "SignatureVersion" : "1",
+  "Signature" : "xxxxxxxxxxxx",
+  "SigningCertURL" : "https://hoge.com/hoge.pem",
+  "UnsubscribeURL" : "https://hoge.com/un"
+}
