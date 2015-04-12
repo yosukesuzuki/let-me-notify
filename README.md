@@ -25,9 +25,8 @@ export AWS_SECRET_ACCESS_KEY=xxxxxxx
 $ tox
 ```
 
-# add application folder
-```
-$ cd project
-$ python manage.py startapp appname
-```
+## run tests on circleci
+- PATH = $PATH:$HOME/google_appengine/
+- AWS_ACCESS_KEY_ID = toyourkeyid
+- AWS_SECRET_ACCESS_KEY = toyoursecret
 
