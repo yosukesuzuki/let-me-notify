@@ -6,17 +6,17 @@ from kay.routing import (
 )
 
 from core.models import CTNotification
-from admin.forms import SGNotificationForm
+from admin.forms import CTNotificationForm
 
 
-class SGNotificationCRUDViewGroup(crud.CRUDViewGroup):
+class CTNotificationCRUDViewGroup(crud.CRUDViewGroup):
     model = CTNotification
-    form = SGNotificationForm
+    form = CTNotificationForm
 
 
 view_groups = [
     ViewGroup(
         Rule('/', endpoint='index', view='admin.views.index'),
     ),
-    SGNotificationCRUDViewGroup(),
+    CTNotificationCRUDViewGroup(),
 ]

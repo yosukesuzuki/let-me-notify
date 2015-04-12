@@ -5,6 +5,6 @@ from kay.utils.forms.modelform import ModelForm
 from core.models import CTNotification
 
 
-class SGNotificationForm(ModelForm):
+class CTNotificationForm(ModelForm):
     class Meta:
         model = CTNotification
