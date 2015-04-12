@@ -10,7 +10,7 @@ from boto.s3.key import Key
 from google.appengine.api import urlfetch
 from google.appengine.ext import deferred
 
-from kay.utils import render_to_response
+# from kay.utils import render_to_response
 
 from ctnotify.queue import get_process_que, get_sqs_connection, get_s3_object_key
 from core.models import CTNotification, CTNotificationLog
