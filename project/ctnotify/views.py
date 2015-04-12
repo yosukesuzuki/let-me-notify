@@ -2,7 +2,7 @@
 
 import json
 
-# from werkzeug import Response
+from werkzeug import Response
 
 from boto.s3.connection import S3Connection
 from boto.s3.key import Key
@@ -71,4 +71,4 @@ def index(request):
     ct_notif_settings = CTNotification.all().fetch(1000)
     for ct_setting in ct_notif_settings:
         check_ctlog(ct_setting)
-    return render_to_response('ctnotify/index.html', {'message': 'Hello'})
+    return Response('ok')
