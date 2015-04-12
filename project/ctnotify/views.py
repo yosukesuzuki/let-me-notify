@@ -38,7 +38,7 @@ def parse_ctlog(json_data, filter_string):
 
 def notify_to_slack(ctlogs, webhook_url):
     for ctlog in ctlogs:
-        raw_content = '```\n'+json.dumps(ctlog['ctlog'], indent=4) + '\n```'
+        raw_content = '```\n' + json.dumps(ctlog['ctlog'], indent=4) + '\n```'
         payloads = json.dumps(
             {'text': raw_content, 'username': u'notify-bot'}, ensure_ascii=True)
         urlfetch.fetch(
@@ -60,7 +60,7 @@ def check_ctlog(ct_setting):
         fetch_que_result = sqs_connection.receive_message(parse_task_que)
         bucket_name, object_key = get_s3_object_key(fetch_que_result[0].get_body())
         ctlog = json.loads(get_s3_object(ct_setting.access_key_id, ct_setting.secret_access_key,
-            bucket_name, object_key))
+                                         bucket_name, object_key))
         parse_result = parse_ctlog(ctlog, ct_setting.event_name)
         notify_to_slack(parse_result, ct_setting.slack_webhook)
         parse_task_que.delete_message(fetch_que_result[0])
