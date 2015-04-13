@@ -21,6 +21,14 @@ export AWS_SECRET_ACCESS_KEY=xxxxxxx
 ```
 
 ## run tests with tox
+install tox 
+
+```
+$ pip install tox
+```
+
+run
+
 ```
 $ tox
 ```
