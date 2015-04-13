@@ -1,4 +1,4 @@
 cron:
 - description: task for CloudTrail notification
   url: /ctnotify/
-  schedule: every 1 hours
+  schedule: every 10 minutes
